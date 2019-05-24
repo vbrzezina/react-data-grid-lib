@@ -1,0 +1,47 @@
+{
+  "name": "react-data-grid",
+  "version": "7.0.0-alpha.12",
+  "description": "Excel-like grid component built with React, with editors, keyboard navigation, copy & paste, and the like",
+  "author": "Adazzle",
+  "license": "MIT",
+  "main": "commonjs/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "commonjs"
+  ],
+  "sideEffects": false,
+  "repository": "adazzle/react-data-grid",
+  "homepage": "https://github.com/adazzle/react-data-grid",
+  "bugs": {
+    "url": "https://github.com/adazzle/react-data-grid/issues"
+  },
+  "keywords": [
+    "react",
+    "react-data-grid",
+    "data-grid",
+    "core"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build-commonjs": "tsc --module commonjs --outdir commonjs --esModuleInterop"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "immutable": "^3.8.2",
+    "react-is": "^16.8.4",
+    "shallowequal": "^1.1.0",
+    "tslib": "^1.9.3"
+  },
+  "peerDependencies": {
+    "@types/classnames": "^2.2",
+    "@types/react": "^16.8",
+    "@types/react-dom": "^16.8",
+    "@types/react-is": "^16.7",
+    "@types/shallowequal": "^1.1",
+    "react": "^16.8",
+    "react-dom": "^16.8"
+  }
+}
