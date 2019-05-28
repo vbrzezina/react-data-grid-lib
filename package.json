@@ -4,13 +4,10 @@
   "description": "Excel-like grid component built with React, with editors, keyboard navigation, copy & paste, and the like",
   "author": "Adazzle",
   "license": "MIT",
-  "main": "commonjs/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
   "files": [
     "dist",
-    "lib",
-    "commonjs"
+    "lib"
   ],
   "sideEffects": false,
   "repository": "adazzle/react-data-grid",
@@ -36,16 +33,16 @@
     "tslib": "^1.9.3"
   },
   "peerDependencies": {
-    "@types/classnames": "^2.2",
-    "@types/react": "^16.8",
-    "@types/react-dom": "^16.8",
-    "@types/react-is": "^16.7",
-    "@types/shallowequal": "^1.1",
     "react": "^16.8",
     "react-dom": "^16.8"
   },
   "devDependencies": {
     "tsc": "^1.20150623.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "@types/classnames": "^2.2",
+    "@types/react": "^16.8",
+    "@types/react-dom": "^16.8",
+    "@types/react-is": "^16.7",
+    "@types/shallowequal": "^1.1"
   }
 }

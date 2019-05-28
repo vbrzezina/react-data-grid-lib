@@ -11,6 +11,7 @@
       "dom",
       "dom.iterable"
     ],
+    "outDir": "lib",
     "module": "umd",
     "moduleResolution": "node",
     "noImplicitReturns": true,
