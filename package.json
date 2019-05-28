@@ -23,7 +23,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "start": "tsc -w"
+    "start": "tsc -w",
+    "install": "build"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -37,12 +38,12 @@
     "react-dom": "^16.8"
   },
   "devDependencies": {
-    "tsc": "^1.20150623.0",
-    "typescript": "^3.4.5",
     "@types/classnames": "^2.2",
     "@types/react": "^16.8",
     "@types/react-dom": "^16.8",
     "@types/react-is": "^16.7",
-    "@types/shallowequal": "^1.1"
+    "@types/shallowequal": "^1.1",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.4.5"
   }
 }
