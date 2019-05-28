@@ -1,10 +1,10 @@
 import Immutable from 'immutable';
 
-export function isColumnsImmutable(columns: unknown): columns is Immutable.List<unknown> {
+export function isColumnsImmutable(columns: any): columns is Immutable.List<any> {
   return Immutable.List.isList(columns);
 }
 
-export function isEmptyArray(obj: unknown): boolean {
+export function isEmptyArray(obj: any): boolean {
   return Array.isArray(obj) && obj.length === 0;
 }
 
@@ -23,7 +23,7 @@ export function isImmutableCollection<T>(objToVerify: T): boolean {
 export function getMixedTypeValueRetriever(isImmutable: boolean) {
   return {
     getValue: isImmutable
-      ? (immutable: Immutable.Map<string, unknown>, key: string) => immutable.get(key)
+      ? (immutable: Immutable.Map<string, any>, key: string) => immutable.get(key)
       : <T>(item: T, key: keyof T): T[typeof key] => item[key]
   };
 }

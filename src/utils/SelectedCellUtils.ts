@@ -88,7 +88,7 @@ interface isSelectedCellEditableOpts {
   selectedPosition: Position;
   columns: CalculatedColumn[];
   rowGetter: RowGetter;
-  onCheckCellIsEditable?(arg: { row: unknown; column: CalculatedColumn } & Position): boolean;
+  onCheckCellIsEditable?(arg: { row: any; column: CalculatedColumn } & Position): boolean;
 }
 
 export function isSelectedCellEditable({ enableCellSelect, selectedPosition, columns, rowGetter, onCheckCellIsEditable }: isSelectedCellEditableOpts): boolean {

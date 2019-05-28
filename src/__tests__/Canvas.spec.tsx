@@ -131,7 +131,7 @@ describe('Canvas Tests', () => {
     const COLUMNS = [{ idx: 0, key: 'id', name: 'ID', width: 100, left: 100 }];
 
     it('can render a custom renderer if __metadata property exists', () => {
-      const EmptyChildRow = (props: unknown, rowIdx: number) => {
+      const EmptyChildRow = (props: any, rowIdx: number) => {
         return <div key={rowIdx} className="test-row-renderer" />;
       };
 

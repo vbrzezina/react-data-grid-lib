@@ -175,7 +175,7 @@ export default class Canvas extends React.PureComponent<Props> {
 
     // Else use new rowSelection props
     if (this.props.rowSelection) {
-      const { keys, indexes, isSelectedKey } = this.props.rowSelection as { [key: string]: unknown };
+      const { keys, indexes, isSelectedKey } = this.props.rowSelection as { [key: string]: any };
       return isRowSelected(keys as { rowKey?: string; values?: string[] } | null, indexes as number[] | null, isSelectedKey as string | null, row, idx);
     }
 

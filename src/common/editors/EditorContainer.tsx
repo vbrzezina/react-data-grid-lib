@@ -9,13 +9,13 @@ import ClickOutside from './ClickOutside';
 export interface Props {
   rowIdx: number;
   rowData: RowData;
-  value: unknown;
+  value: any;
   column: CalculatedColumn;
   width: number;
   height: number;
   left: number;
   top: number;
-  onGridKeyDown?(e: KeyboardEvent): void;
+  onGridKeyDown?(e: KeyboardEvent<HTMLElement>): void;
   onCommit(e: CommitEvent): void;
   onCommitCancel(): void;
   firstEditorKeyPress: string | null;
@@ -222,7 +222,7 @@ export default class EditorContainer extends React.Component<Props, State> {
     this.props.onCommitCancel();
   };
 
-  isNewValueValid = (value: unknown) => {
+  isNewValueValid = (value: any) => {
     const { validate } = this.getEditor();
     if (validate) {
       const isValid = validate(value);

@@ -13,65 +13,65 @@ import { EventBus } from './masks';
 import { Position, Column, CalculatedColumn, CellMetaData, InteractionMasksMetaData, ColumnMetrics, RowData, SelectedRange, RowSelection, HeaderRowData, AddFilterEvent, ColumnList, CommitEvent, GridRowsUpdatedEvent, RowSelectionParams } from './common/types';
 
 type SharedGridProps = Pick<GridProps,
-/** The primary key property of each row */
-'rowKey'
-/** The height of each row in pixels */
-| 'rowHeight'
-| 'rowRenderer'
-| 'rowGroupRenderer'
-/** A function called for each rendered row that should return a plain key/value pair object */
-| 'rowGetter'
-/** The number of rows to be rendered */
-| 'rowsCount'
-/** The minimum height of the grid in pixels */
-| 'minHeight'
-/** When set, grid will scroll to this row index */
-| 'scrollToRowIndex'
-/** Component used to render a context menu. react-data-grid-addons provides a default context menu which may be used*/
-| 'contextMenu'
-/** Used to toggle whether cells can be selected or not */
-| 'enableCellSelect'
-/** Toggles whether cells should be autofocused */
-| 'enableCellAutoFocus'
-| 'cellNavigationMode'
-/** The node where the editor portal should mount. */
-| 'editorPortalTarget'
-/** The key of the column which is currently being sorted */
-| 'sortColumn'
-/** The direction to sort the sortColumn*/
-| 'sortDirection'
-/** Called when the grid is scrolled */
-| 'onScroll'
-/** Component used to render a draggable header cell */
-| 'draggableHeaderCell'
-| 'getValidFilterValues'
-| 'RowsContainer'
-| 'emptyRowsView'
-| 'onHeaderDrop'
-| 'getSubRowDetails'
+  /** The primary key property of each row */
+  'rowKey'
+  /** The height of each row in pixels */
+  | 'rowHeight'
+  | 'rowRenderer'
+  | 'rowGroupRenderer'
+  /** A function called for each rendered row that should return a plain key/value pair object */
+  | 'rowGetter'
+  /** The number of rows to be rendered */
+  | 'rowsCount'
+  /** The minimum height of the grid in pixels */
+  | 'minHeight'
+  /** When set, grid will scroll to this row index */
+  | 'scrollToRowIndex'
+  /** Component used to render a context menu. react-data-grid-addons provides a default context menu which may be used*/
+  | 'contextMenu'
+  /** Used to toggle whether cells can be selected or not */
+  | 'enableCellSelect'
+  /** Toggles whether cells should be autofocused */
+  | 'enableCellAutoFocus'
+  | 'cellNavigationMode'
+  /** The node where the editor portal should mount. */
+  | 'editorPortalTarget'
+  /** The key of the column which is currently being sorted */
+  | 'sortColumn'
+  /** The direction to sort the sortColumn*/
+  | 'sortDirection'
+  /** Called when the grid is scrolled */
+  | 'onScroll'
+  /** Component used to render a draggable header cell */
+  | 'draggableHeaderCell'
+  | 'getValidFilterValues'
+  | 'RowsContainer'
+  | 'emptyRowsView'
+  | 'onHeaderDrop'
+  | 'getSubRowDetails'
 >;
 
 type SharedCellMetaData = Pick<CellMetaData,
-/** Function called on each cell render to render a list of actions for each cell */
-'getCellActions'
-/** Called whenever a sub row is deleted from the grid */
-| 'onDeleteSubRow'
-/** Called whenever a sub row is added to the grid */
-| 'onAddSubRow'
-/** Function called whenever a cell has been expanded */
-| 'onCellExpand'
-| 'onRowExpandToggle'
+  /** Function called on each cell render to render a list of actions for each cell */
+  'getCellActions'
+  /** Called whenever a sub row is deleted from the grid */
+  | 'onDeleteSubRow'
+  /** Called whenever a sub row is added to the grid */
+  | 'onAddSubRow'
+  /** Function called whenever a cell has been expanded */
+  | 'onCellExpand'
+  | 'onRowExpandToggle'
 >;
 
 type SharedInteractionMasksMetaData = Pick<InteractionMasksMetaData,
-/** Deprecated: Function called when grid is updated via a copy/paste. Use onGridRowsUpdated instead*/
-'onCellCopyPaste'
-/** Function called whenever a cell is selected */
-| 'onCellSelected'
-/** Function called whenever a cell is deselected */
-| 'onCellDeSelected'
-/** called before cell is set active, returns a boolean to determine whether cell is editable */
-| 'onCheckCellIsEditable'
+  /** Deprecated: Function called when grid is updated via a copy/paste. Use onGridRowsUpdated instead*/
+  'onCellCopyPaste'
+  /** Function called whenever a cell is selected */
+  | 'onCellSelected'
+  /** Function called whenever a cell is deselected */
+  | 'onCellDeSelected'
+  /** called before cell is set active, returns a boolean to determine whether cell is editable */
+  | 'onCheckCellIsEditable'
 >;
 
 interface Props extends SharedGridProps, SharedCellMetaData, SharedInteractionMasksMetaData {
@@ -137,17 +137,17 @@ interface Props extends SharedGridProps, SharedCellMetaData, SharedInteractionMa
 }
 
 type DefaultProps = Pick<Props,
-'enableCellSelect'
-| 'rowHeight'
-| 'headerFiltersHeight'
-| 'enableRowSelect'
-| 'minHeight'
-| 'rowKey'
-| 'cellNavigationMode'
-| 'enableCellAutoFocus'
-| 'minColumnWidth'
-| 'columnEquality'
-| 'editorPortalTarget'
+  'enableCellSelect'
+  | 'rowHeight'
+  | 'headerFiltersHeight'
+  | 'enableRowSelect'
+  | 'minHeight'
+  | 'rowKey'
+  | 'cellNavigationMode'
+  | 'enableCellAutoFocus'
+  | 'minColumnWidth'
+  | 'columnEquality'
+  | 'editorPortalTarget'
 >;
 
 
@@ -160,7 +160,7 @@ interface State {
   sortDirection?: DEFINE_SORT;
 }
 
-function isRowSelected(keys: unknown, indexes: unknown, isSelectedKey: unknown, rowData: RowData, rowIdx: number) {
+function isRowSelected(keys: any, indexes: any, isSelectedKey: any, rowData: RowData, rowIdx: number) {
   return rowUtils.isRowSelected(keys as { rowKey?: string; values?: string[] } | null, indexes as number[] | null, isSelectedKey as string | null, rowData, rowIdx);
 }
 
@@ -394,7 +394,7 @@ export default class ReactDataGrid extends React.Component<Props, State> {
     });
   };
 
-  getSelectedRow(rows: RowData[], key: unknown) {
+  getSelectedRow(rows: RowData[], key: any) {
     return rows.find(r => r[this.props.rowKey] === key);
   }
 
@@ -406,7 +406,7 @@ export default class ReactDataGrid extends React.Component<Props, State> {
   handleShiftSelect = (rowIdx: number) => {
     const { rowSelection } = this.props;
     if (rowSelection && this.state.lastRowIdxUiSelected > -1 && this.isSingleKeyDown(KeyCodes.Shift)) {
-      const { keys, indexes, isSelectedKey } = rowSelection.selectBy as { [key: string]: unknown };
+      const { keys, indexes, isSelectedKey } = rowSelection.selectBy as { [key: string]: any };
       const isPreviouslySelected = isRowSelected(keys, indexes, isSelectedKey, this.props.rowGetter(rowIdx), rowIdx);
 
       if (isPreviouslySelected) return false;
@@ -457,7 +457,7 @@ export default class ReactDataGrid extends React.Component<Props, State> {
 
     const { rowSelection } = this.props;
     if (rowSelection) {
-      const { keys, indexes, isSelectedKey } = rowSelection.selectBy as { [key: string]: unknown };
+      const { keys, indexes, isSelectedKey } = rowSelection.selectBy as { [key: string]: any };
       const isPreviouslySelected = isRowSelected(keys, indexes, isSelectedKey, rowData, rowIdx);
 
       this.setState({ lastRowIdxUiSelected: isPreviouslySelected ? -1 : rowIdx });
@@ -502,7 +502,7 @@ export default class ReactDataGrid extends React.Component<Props, State> {
     const allRowsSelected = e.currentTarget instanceof HTMLInputElement && e.currentTarget.checked;
     const { rowSelection } = this.props;
     if (rowSelection && this.useNewRowSelection()) {
-      const { keys, indexes, isSelectedKey } = rowSelection.selectBy as { [key: string]: unknown };
+      const { keys, indexes, isSelectedKey } = rowSelection.selectBy as { [key: string]: any };
 
       if (allRowsSelected && typeof rowSelection.onRowsSelected === 'function') {
         const selectedRows = [];
@@ -592,7 +592,7 @@ export default class ReactDataGrid extends React.Component<Props, State> {
       const SelectAllComponent = this.props.selectAllRenderer || SelectAll;
       const SelectAllRenderer = <SelectAllComponent onChange={this.handleCheckboxChange} ref={this.selectAllCheckbox} />;
       const headerRenderer = props.enableRowSelect === 'single' ? undefined : SelectAllRenderer;
-      const Formatter = (this.props.rowActionsCell ? this.props.rowActionsCell : CheckboxEditor) as unknown as React.ComponentClass<{ rowSelection: unknown }>;
+      const Formatter = (this.props.rowActionsCell ? this.props.rowActionsCell : CheckboxEditor) as any as React.ComponentClass<{ rowSelection: any }>;
       const selectColumn: Column = {
         key: 'select-row',
         name: '',

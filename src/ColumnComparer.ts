@@ -3,8 +3,8 @@ import { isElement } from 'react-is';
 export function sameColumn<A, B>(a: A, b: B): boolean {
   for (const k in a) {
     if (a.hasOwnProperty(k)) {
-      const valA = a[k] as unknown;
-      const valB = b[k as string as keyof B] as unknown;
+      const valA = a[k] as any;
+      const valB = b[k as string as keyof B] as any;
       if ((typeof valA === 'function' && typeof valB === 'function') || (isElement(valA) && isElement(valB))) {
         continue;
       }

@@ -15,7 +15,7 @@ export interface Props extends CellRendererProps {
   // TODO: Check if these props are required or not. These are most likely set by custom cell renderer
   className?: string;
   tooltip?: string;
-  cellControls?: unknown;
+  cellControls?: any;
 }
 
 export default class Cell extends React.PureComponent<Props> implements CellRenderer {
@@ -203,7 +203,7 @@ export default class Cell extends React.PureComponent<Props> implements CellRend
     let cellContent;
     const { value, column, height, tooltip, isScrolling, expandableOptions, cellMetaData, rowIdx } = this.props;
     const Formatter = column.formatter;
-    const cellProps: FormatterProps<unknown> = {
+    const cellProps: FormatterProps<any> = {
       rowIdx,
       value,
       isScrolling,

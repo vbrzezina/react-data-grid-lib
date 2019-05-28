@@ -1,9 +1,25 @@
 {
-  "extends": "../../tsconfig.base",
   "compilerOptions": {
-    "allowJs": false,
-    "declaration": true,
-    "outDir": "lib"
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "inlineSources": true,
+    "jsx": "react",
+    "lib": [
+      "es2018",
+      "dom",
+      "dom.iterable"
+    ],
+    "module": "umd",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5",
+    "declaration": true
   },
   "files": [
     "src/index.ts"

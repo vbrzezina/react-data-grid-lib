@@ -69,7 +69,7 @@ export interface Props extends InteractionMasksMetaData {
 export interface State {
   selectedPosition: Position;
   selectedRange: SelectedRange;
-  copiedPosition: Position & { value: unknown } | null;
+  copiedPosition: Position & { value: any } | null;
   draggedPosition: DraggedPosition | null;
   editorPosition: { top: number; left: number } | null;
   isEditorEnabled: boolean;
@@ -289,7 +289,7 @@ export default class InteractionMasks extends React.Component<Props, State> {
     return this.props.onCellCopyPaste !== null && this.isSelectedCellEditable();
   }
 
-  handleCopy(value: unknown): void {
+  handleCopy(value: any): void {
     const { rowIdx, idx } = this.state.selectedPosition;
     this.setState({
       copiedPosition: { rowIdx, idx, value }

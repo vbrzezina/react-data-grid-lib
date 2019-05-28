@@ -6,14 +6,14 @@ import EventBus from './masks/EventBus';
 interface Props {
   height: number;
   columns: CalculatedColumn[];
-  row: unknown;
+  row: any;
   cellRenderer?(): void;
   cellMetaData: CellMetaData;
   isSelected?: boolean;
   idx: number;
   extraClasses?: string;
   forceUpdate?: boolean;
-  subRowDetails?: unknown;
+  subRowDetails?: any;
   isRowHovered?: boolean;
   colVisibleStartIdx: number;
   colVisibleEndIdx: number;

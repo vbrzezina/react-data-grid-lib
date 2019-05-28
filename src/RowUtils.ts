@@ -25,7 +25,7 @@ export function isRowSelected<T, K extends keyof T>(
   }
 
   if (rowData && keys && keys.rowKey && Array.isArray(keys.values)) {
-    return keys.values.includes(rowData[keys.rowKey as K] as unknown as string);
+    return keys.values.includes(rowData[keys.rowKey as K] as any as string);
   }
 
   if (rowData && typeof isSelectedKey === 'string') {

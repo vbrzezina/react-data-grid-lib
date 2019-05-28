@@ -24,7 +24,7 @@ export interface HeaderRowProps {
   rowType: HeaderRowType;
   draggableHeaderCell?: React.ComponentType<{ column: CalculatedColumn; onHeaderDrop(): void }>;
   onHeaderDrop?(): void;
-  getValidFilterValues?(): unknown[];
+  getValidFilterValues?(): any[];
 }
 
 export default class HeaderRow extends React.Component<HeaderRowProps> {
