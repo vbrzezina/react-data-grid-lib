@@ -1,0 +1,31 @@
+import React from 'react';
+import { CellMetaData, RowRendererProps, CalculatedColumn } from './common/types';
+import EventBus from './masks/EventBus';
+interface Props {
+    height: number;
+    columns: CalculatedColumn[];
+    row: any;
+    cellRenderer?(): void;
+    cellMetaData: CellMetaData;
+    isSelected?: boolean;
+    idx: number;
+    extraClasses?: string;
+    forceUpdate?: boolean;
+    subRowDetails?: any;
+    isRowHovered?: boolean;
+    colVisibleStartIdx: number;
+    colVisibleEndIdx: number;
+    colOverscanStartIdx: number;
+    colOverscanEndIdx: number;
+    isScrolling: boolean;
+    columnGroupDisplayName: string;
+    columnGroupName: string;
+    isExpanded: boolean;
+    treeDepth?: number;
+    name: string;
+    renderer?: React.ComponentType;
+    eventBus: EventBus;
+    renderBaseRow(p: RowRendererProps): React.ReactElement;
+}
+declare const RowGroup: React.ForwardRefExoticComponent<Props & React.RefAttributes<HTMLDivElement>>;
+export default RowGroup;

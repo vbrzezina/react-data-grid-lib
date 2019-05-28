@@ -23,15 +23,13 @@
   ],
   "scripts": {
     "build": "tsc",
-    "start": "tsc -w",
-    "install": "build"
+    "start": "tsc -w"
   },
   "dependencies": {
     "classnames": "^2.2.6",
     "immutable": "^3.8.2",
     "react-is": "^16.8.4",
-    "shallowequal": "^1.1.0",
-    "tslib": "^1.9.3"
+    "shallowequal": "^1.1.0"
   },
   "peerDependencies": {
     "react": "^16.8",
