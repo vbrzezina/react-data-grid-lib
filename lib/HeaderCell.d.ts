@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { HeaderRowType } from './common/enums';
 import { CalculatedColumn } from './common/types';
 interface Props {

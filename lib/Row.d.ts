@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Cell from './Cell';
 import { RowRenderer, RowRendererProps, CalculatedColumn } from './common/types';
 export default class Row extends React.Component<RowRendererProps> implements RowRenderer {

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import RowsContainer, { RowsContainerProps } from './RowsContainer';
 import { EventBus } from './masks';
 import { CellNavigationMode } from './common/enums';

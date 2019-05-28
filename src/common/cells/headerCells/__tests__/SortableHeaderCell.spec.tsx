@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { shallow } from 'enzyme';
 import SortableHeaderCell, { Props } from '../SortableHeaderCell';
 import { HeaderRowType, DEFINE_SORT } from '../../../enums';

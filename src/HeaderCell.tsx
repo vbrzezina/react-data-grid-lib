@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 import { isElement } from 'react-is';
 import { isFrozen } from './ColumnUtils';

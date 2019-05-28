@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { RowsContainerProps } from './RowsContainer';
 import EventBus from './masks/EventBus';
 import { ColumnMetrics, CellMetaData, RowGetter, RowData, SubRowDetails, InteractionMasksMetaData, RowSelection } from './common/types';

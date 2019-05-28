@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { CellRenderer, CellRendererProps } from './common/types';
 export interface Props extends CellRendererProps {
     className?: string;

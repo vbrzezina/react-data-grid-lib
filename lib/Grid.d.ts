@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { HeaderProps } from './Header';
 import { ViewportProps, ScrollState } from './Viewport';
 import { Omit } from './common/types';

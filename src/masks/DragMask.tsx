@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import { Position, Dimension } from '../common/types';
 import CellMask from './CellMask';

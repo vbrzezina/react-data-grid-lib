@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { GridProps } from './Grid';
 import { CheckboxEditorProps } from './common/editors/CheckboxEditor';
 import { DEFINE_SORT } from './common/enums';

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { HeaderRowProps } from './HeaderRow';
 import { CalculatedColumn, ColumnMetrics, CellMetaData, HeaderRowData } from './common/types';
 declare type SharedHeaderRowProps = Pick<HeaderRowProps, 'draggableHeaderCell' | 'getValidFilterValues' | 'sortDirection' | 'sortColumn' | 'onHeaderDrop' | 'onSort'>;

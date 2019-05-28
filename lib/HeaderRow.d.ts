@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { HeaderRowType, HeaderCellType, DEFINE_SORT } from './common/enums';
 import { CalculatedColumn, AddFilterEvent } from './common/types';
 export interface HeaderRowProps {

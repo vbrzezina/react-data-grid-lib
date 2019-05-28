@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { ToolbarProps } from './common/types';
 export interface ToolbarContainerProps extends ToolbarProps {
     /** Component used to render toolbar above the grid */
