@@ -1,3 +1,0 @@
-/// <reference types="react" />
-export declare function isKeyPrintable(keycode: number): boolean;
-export declare function isCtrlKeyHeldDown(e: React.KeyboardEvent): boolean;
