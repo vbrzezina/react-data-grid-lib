@@ -9,7 +9,7 @@
     "lib": [
       "es2019",
       "dom",
-      "dom.iterable"
+      "dom.iterable",
     ],
     "outDir": "lib",
     "module": "esnext",
@@ -22,7 +22,10 @@
     "target": "es5",
     "declaration": true
   },
-  "files": [
-    "src/index.ts"
+  "include": [
+    "src/"
+  ],
+  "exclude": [
+    "node_modules/"
   ]
 }

@@ -1,16 +1,15 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: './src/index.ts',
-    mode: 'development',
-    devtool: 'inline-source-map',
+    mode: isDev ? 'development' : 'production',
+    devtool: isDev ? 'inline-source-map' : false,
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
-                loader: 'awesome-typescript-loader',
-                exclude: /node_modules/
+                loader: 'ts-loader'
             },
             {
                 test: /\.(png|jpe?g|gif)$/,
