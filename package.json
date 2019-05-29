@@ -22,8 +22,9 @@
     "core"
   ],
   "scripts": {
-    "build": "tsc",
-    "start": "tsc -w"
+    "build": "webpack",
+    "postinstall": "webpack",
+    "start": "webpack -watch"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -42,7 +43,15 @@
     "@types/react-dom": "^16.8",
     "@types/react-is": "^16.7",
     "@types/shallowequal": "^1.1",
-    "tsc": "^1.20150623.0",
-    "typescript": "^3.4.5"
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-css": "^4.2.1",
+    "css-loader": "^2.1.1",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.4.5",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   }
 }

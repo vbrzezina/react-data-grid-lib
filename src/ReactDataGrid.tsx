@@ -11,6 +11,7 @@ import { sameColumn, sameColumns, recalculate, resizeColumn } from './ColumnMetr
 import { CellNavigationMode, EventTypes, UpdateActions, HeaderRowType, DEFINE_SORT } from './common/enums';
 import { EventBus } from './masks';
 import { Position, Column, CalculatedColumn, CellMetaData, InteractionMasksMetaData, ColumnMetrics, RowData, SelectedRange, RowSelection, HeaderRowData, AddFilterEvent, ColumnList, CommitEvent, GridRowsUpdatedEvent, RowSelectionParams } from './common/types';
+import './style/react-data-grid.less';
 
 type SharedGridProps = Pick<GridProps,
   /** The primary key property of each row */

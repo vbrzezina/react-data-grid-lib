@@ -3,6 +3,7 @@ import { GridProps } from './Grid';
 import { CheckboxEditorProps } from './common/editors/CheckboxEditor';
 import { DEFINE_SORT } from './common/enums';
 import { Position, Column, CalculatedColumn, CellMetaData, InteractionMasksMetaData, ColumnMetrics, RowData, SelectedRange, RowSelection, HeaderRowData, AddFilterEvent, ColumnList, CommitEvent, GridRowsUpdatedEvent, RowSelectionParams } from './common/types';
+import './style/react-data-grid.less';
 declare type SharedGridProps = Pick<GridProps, 
 /** The primary key property of each row */
 'rowKey'
