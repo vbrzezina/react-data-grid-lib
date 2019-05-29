@@ -12,7 +12,7 @@
       "dom.iterable"
     ],
     "outDir": "lib",
-    "module": "umd",
+    "module": "esnext",
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
